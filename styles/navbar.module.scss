@@ -73,31 +73,24 @@
   }
 }
 
-
 //responsive in mobile size
 @media (max-width: 968px) {
   .header_dark {
-  .center {
-    display: none;
+    .left {
+      display: none;
+    }
+    .right {
+      display: none;
+    }
   }
-  .left {
-    display: none;
+  .header {
+    .left {
+      display: none;
+    }
+    .right {
+      display: none;
+    }
   }
-  .right {
-    display: none;
-  }
-}
-.header {
-  .center {
-    display: none;
-  }
-  .left {
-    display: none;
-  }
-  .right {
-    display: none;
-  }
-}
 }
 
 //
