@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import styles from "../styles/landingpage.module.scss";
 import Button from "../components/shared/button";
 import Navbar from "../components/shared/my_navbar";
+import { themeContext } from "../context/themeProvider";
 
-interface Props{
-data?:any;
-}
-
-const Landingpage:React.FC<Props> = ({ data }) => {
-  console.log(data)
+const Landingpage: React.FC = () => {
+  const { state } = useContext(themeContext);
+  console.log(state);
   return (
     <>
       <Navbar />
@@ -22,7 +20,7 @@ const Landingpage:React.FC<Props> = ({ data }) => {
               layout="fixed"
               height={250}
               width={300}
-              style={{borderRadius:12}}
+              style={{ borderRadius: 12 }}
             />
           </div>
           <div className={styles.text_container}>

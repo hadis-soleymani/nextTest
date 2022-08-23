@@ -1,16 +1,19 @@
-import type { NextPage } from 'next'
-
-import My_navbar from '../components/shared/my_navbar'
-import styles from '../styles/Home.module.scss'
-import AboutUs from './aboutUs'
+import type { NextPage } from "next";
+import React, { useContext } from "react";
+import ThemeProvider, { themeContext } from "../context/themeProvider";
+import styles from "../styles/Home.module.scss";
+import AboutUs from "./aboutUs";
 
 const Home: NextPage = () => {
+  const { state } = useContext(themeContext);
+  console.log(state);
   return (
-    <div className={styles.container}>
-      <AboutUs/>
-   
-    </div>
-  )
-}
+    <ThemeProvider>
+      <div>
+        <AboutUs />
+      </div>
+    </ThemeProvider>
+  );
+};
 
-export default Home
+export default Home;

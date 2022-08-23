@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import styles from "../styles/about_us.module.scss";
 import Button from "../components/shared/button";
 import Navbar from "../components/shared/my_navbar";
+import { themeContext } from "../context/themeProvider";
+
 const AboutUs = () => {
+  const { state } = useContext(themeContext);
+  console.log(state);
   return (
-    <>
-    
+    <div style={{backgroundColor:"#f5f5f5"}}>
       <Navbar />
       <div className={styles.container}>
         <div className={styles.image_container}>
@@ -16,7 +19,7 @@ const AboutUs = () => {
             layout="fixed"
             height={350}
             width={800}
-            style={{borderRadius:12}}
+            style={{ borderRadius: 12 }}
           />
         </div>
         <p className={styles.text}>
@@ -29,7 +32,7 @@ const AboutUs = () => {
         </p>
         <Button>درباره ی ما</Button>
       </div>
-    </>
+    </div>
   );
 };
 
