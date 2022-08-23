@@ -3,13 +3,14 @@ import Image from "next/image";
 import styles from "../styles/landingpage.module.scss";
 import Button from "../components/shared/button";
 import Navbar from "../components/shared/my_navbar";
-import { themeContext } from "../context/themeProvider";
+import ThemeProvider, { themeContext } from "../context/themeProvider";
 
 const Landingpage: React.FC = () => {
   const { state } = useContext(themeContext);
   console.log(state);
   return (
-    <>
+   
+       <div className={state.theme==="light"?styles.page_container:styles.page_container_dark}>
       <Navbar />
       <div className={styles.container}>
         <div className={styles.content_container}>
@@ -35,7 +36,8 @@ const Landingpage: React.FC = () => {
         </div>
         <Button>صفحه ی اصلی</Button>
       </div>
-    </>
+      </div>
+   
   );
 };
 

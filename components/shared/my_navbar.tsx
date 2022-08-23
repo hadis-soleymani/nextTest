@@ -1,6 +1,6 @@
 // note: this file is header component
 
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import Link from "next/link";
 
@@ -8,7 +8,7 @@ import Link from "next/link";
 import styles from "../../styles/navbar.module.scss";
 
 //icons
-import { MdOutlineLightMode, MdOutlineNightlight } from "react-icons/md";
+import { MdLightMode, MdNightlight } from "react-icons/md";
 
 //components
 import HamburgerMenu from "./hamburgerMenu";
@@ -18,42 +18,55 @@ import { themeContext } from "../../context/themeProvider";
 const Navbar = () => {
   const [checked, setChecked] = useState<boolean>(true);
   const { state, dispatch } = useContext(themeContext);
-  
-  const p = () => {
-    setChecked(!checked);
-   
+
+  const p = (e: React.FormEvent) => {
     if (checked) {
+      setChecked(false);
       dispatch({ type: "dark", payload: "dark" });
     } else {
+      setChecked(true);
       dispatch({ type: "light", payload: "light" });
     }
   };
 
   return (
-    <header
-      className={styles.header}
-    >
-      <div className={styles.left}>
-        <Button>ورود</Button>
-        <Button>ثبت نام</Button>
-      </div>
+    <div style={{ backgroundColor: "#000" }}>
+      <header
+        className={state.theme === "dark" ? styles.header_dark : styles.header}
+      >
+        <div className={styles.left}>
+          <Button>ورود</Button>
+          <Button>ثبت نام</Button>
+        </div>
 
-      <nav className={styles.center}>
-        <MdOutlineNightlight size={20} />
-        <label className={styles.switch}>
-          <input type="checkbox" checked={checked} onClick={p} />
-          <span className={styles.slider}></span>
-        </label>
-        <MdOutlineLightMode size={20} />
-      </nav>
+        <nav className={styles.center}>
+          <MdNightlight
+            size={20}
+            color={state.theme === "dark" ? "#FFB320" : "#000"}
+          />
+          <label className={styles.switch}>
+            <input
+              type="checkbox"
+              checked={checked}
+              onClick={p}
+              onChange={(e) => p(e)}
+            />
+            <span className={styles.slider}></span>
+          </label>
+          <MdLightMode
+            size={20}
+            color={state.theme === "light" ? "#FFB320" : "#000"}
+          />
+        </nav>
 
-      <nav className={styles.right}>
-        <Link href="/aboutUs">درباره ی ما</Link>
-        <Link href="/landingpage">صفحه ی نخست</Link>
-      </nav>
-      {/* hamburgger menu just in mobile size */}
-      <HamburgerMenu />
-    </header>
+        <nav className={styles.right}>
+          <Link href="/aboutUs">درباره ی ما</Link>
+          <Link href="/landingpage">صفحه ی نخست</Link>
+        </nav>
+        {/* hamburgger menu just in mobile size */}
+        <HamburgerMenu />
+      </header>
+    </div>
   );
 };
 export default Navbar;

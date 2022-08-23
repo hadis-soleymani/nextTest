@@ -1,18 +1,9 @@
 import type { NextPage } from "next";
-import React, { useContext } from "react";
-import ThemeProvider, { themeContext } from "../context/themeProvider";
+import React from "react";
 import AboutUs from "./aboutUs";
 
 const Home: NextPage = () => {
-  const { state } = useContext(themeContext);
-  console.log(state);
-  return (
-    <ThemeProvider>
-      <div >
-        <AboutUs />
-      </div>
-    </ThemeProvider>
-  );
+  return <AboutUs />;
 };
 
 export default Home;

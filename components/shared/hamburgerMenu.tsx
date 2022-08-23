@@ -17,7 +17,7 @@ interface Props {
 //styled components
 const Div = styled.div<Props>`
   display: none;
-  @media (max-width: 768px) {
+  @media (max-width: 968px) {
     display: ${(props) => (!props.first ? "flex" : "none")};
     width: 0vw;
     height: 0vh;
@@ -115,6 +115,9 @@ const Div = styled.div<Props>`
 `;
 const Ul = styled.ul<Props>`
   display: ${(props) => (props.open ? "flex" : "none")};
+  margin:0;
+  text-align:center;
+  padding-left: 0;
 `;
 
 type ClickObject = {

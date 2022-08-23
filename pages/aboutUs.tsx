@@ -3,13 +3,19 @@ import Image from "next/image";
 import styles from "../styles/about_us.module.scss";
 import Button from "../components/shared/button";
 import Navbar from "../components/shared/my_navbar";
-import { themeContext } from "../context/themeProvider";
+import ThemeProvider, { themeContext } from "../context/themeProvider";
 
 const AboutUs = () => {
   const { state } = useContext(themeContext);
   console.log(state);
   return (
-    <div style={{backgroundColor:"#f5f5f5"}}>
+    <div
+      className={
+        state.theme === "light"
+          ? styles.page_container
+          : styles.page_container_dark
+      }
+    >
       <Navbar />
       <div className={styles.container}>
         <div className={styles.image_container}>

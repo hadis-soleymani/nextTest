@@ -22,7 +22,7 @@ const ThemeReducer = (state: Theme, action: ACTIONTYPE) => {
       return { ...state, theme: "dark" };
 
     default:
-      return state;
+      return { ...state, theme: "light" };
   }
 };
 
@@ -34,7 +34,9 @@ interface InputCreateContext {
 
 //create a context with empty initialState (state: [])
 export const themeContext = createContext<InputCreateContext>({
-  state: { theme: "" },
+  state: {
+    theme: "light",
+  },
   dispatch: () => {},
 });
 
@@ -42,14 +44,14 @@ export const themeContext = createContext<InputCreateContext>({
 type ProviderProps = {
   children: React.ReactNode;
 };
-const initialState = {
+const initialState:Theme = {
   theme: "light",
 };
 
 //create context provider for wrapping App component
 const ThemeProvider = (props: ProviderProps) => {
   //[] is initialState
-  const [state, dispatch] = useReducer(ThemeReducer, initialState);
+  const [state, dispatch] = useReducer(ThemeReducer, {theme:'light'});
 
   return (
     <themeContext.Provider

@@ -1,36 +1,82 @@
 @import "variables";
 @import "mixin";
-
-.container {
+.page_container {
+  background-color: #f5f5f5;
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  margin-top: 6rem;
-  width: 86vw;
-  margin-left: 7vw;
-  border-radius: 12px;
-  background-color: white;
-  padding-bottom: 3rem;
-  @include center;
-}
-.content_container {
-  display: flex;
-  flex-direction: row-reverse;
+  width: 100vw;
+ min-height:100vh;
 
-  @include center;
-  margin-bottom: 5rem;
-}
-.text_container {
-  width: 25vw;
-  margin-right: 3rem;
-  margin-top: 4rem;
-  h1 {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    width: 86vw;
+    margin-left: 7vw;
+    border-radius: 12px;
+    background-color: white;
+    padding-bottom: 3rem;
+    @include center;
+  }
+  .content_container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include center;
+    margin-bottom: 5rem;
+  }
+  .text_container {
+    width: 25vw;
+    margin-right: 3rem;
+    margin-top: 4rem;
+    h1 {
+      color: $dark_text;
+      text-align: center;
+    }
+  }
+  .text {
     color: $dark_text;
-    text-align: center;
+    text-align: right;
   }
 }
-.text {
-  color: $dark_text;
-  text-align: right;
+
+//dark theme
+.page_container_dark {
+  background-color: black;
+ width: 100vw;
+ min-height:100vh;
+  display: flex;
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    width: 86vw;
+    margin-left: 7vw;
+    border-radius: 12px;
+    background-color: $dark_bg;
+    padding-bottom: 3rem;
+    @include center;
+  }
+  .content_container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include center;
+    margin-bottom: 5rem;
+  }
+  .text_container {
+    width: 25vw;
+    margin-right: 3rem;
+    margin-top: 4rem;
+    h1 {
+      color: white;
+      text-align: center;
+    }
+  }
+  .text {
+    color: white;
+    text-align: right;
+  }
 }
 //responsive in tablet size
 @media (max-width: 926px) and (min-width: 768px) {
@@ -38,11 +84,28 @@
 
 //responsive in mobile size
 @media (max-width: 768px) {
+  .page_container_dark {
   .content_container {
     flex-direction: column;
+    margin-right: 0;
   }
   .text_container {
     width: 60vw;
+    padding: 1rem 0;
+    text-align: right;
     margin-right: 0;
   }
+}
+.page_container {
+  .content_container {
+    flex-direction: column;
+    padding-top: 2vh;
+  }
+  .text_container {
+    width: 60vw;
+    padding: 1rem 0;
+    text-align: right;
+    margin-right: 0;
+  }
+}
 }
