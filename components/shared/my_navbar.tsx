@@ -21,6 +21,7 @@ const Navbar = () => {
   
   const p = () => {
     setChecked(!checked);
+   
     if (checked) {
       dispatch({ type: "dark", payload: "dark" });
     } else {
@@ -30,7 +31,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={state.theme === "light" ? styles.header : styles.header_dark}
+      className={styles.header}
     >
       <div className={styles.left}>
         <Button>ورود</Button>

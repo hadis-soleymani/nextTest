@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   console.log(state);
   return (
     <ThemeProvider>
-      <div>
+      <div className={styles.container}>
         <AboutUs />
       </div>
     </ThemeProvider>
