@@ -3,17 +3,18 @@
 
 //header container
 .header {
-  top: 0;
-  left: 0;
+  top: 2vh;
+  left: 7vw;
   position: fixed;
-  width: 100vw;
-  padding: 1.5rem 4vw;
+  width: 86vw;
+  padding: 1rem 4vw;
   background-color: #fff;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @include boxSadow;
+  margin-bottom: 2vh;
+  border-radius: 12px;
 }
 .center {
   @include center;

@@ -4,11 +4,17 @@
   @include center;
   flex-direction: column;
   width: 100vw;
-  padding: 0 200px 3rem 200px;
+  padding: 1rem 200px 3rem 200px;
+  margin-top: 6rem;
+  width: 86vw;
+  margin-left: 7vw;
+  border-radius: 12px;
+  background-color: white;
+  padding-bottom: 3rem;
 }
 .image_container {
   width: 60vw;
-  margin-top: 8rem;
+  
   @include center;
 }
 .text {

@@ -42,13 +42,3 @@ const Landingpage:React.FC<Props> = ({ data }) => {
 };
 
 export default Landingpage;
-
-// // This gets called on every request
-// export async function getServerSideProps() {
-//   // Fetch data from external API
-//   const res = await fetch(`https://picsum.photos/200/300`)
-//   const data = await res.json()
-
-//   // Pass data to the page via props
-//   return { props: { data } }
-// }

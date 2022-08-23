@@ -10,7 +10,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import styled from "styled-components";
 
-
 interface Props {
   first?: boolean;
   open?: boolean;
@@ -24,7 +23,7 @@ const Div = styled.div<Props>`
     height: 0vh;
     padding: 0;
     margin: 0;
-    background-color: rgb(107, 140, 85);
+    background-color: #187df1;
     position: fixed;
     right: 0;
     top: 0;
@@ -177,13 +176,8 @@ const HamburgerMenu = () => {
           onClick={hamburger_change_state}
           open={open}
         >
-          <Link href="#">
-            خانه
-          </Link>
-          <Link href="/authentication/sign_in"> خروج</Link>
-          
-          <Link href="#"> درباره ی ما</Link>
-          <Link href="#"> تماس با ما </Link>
+          <Link href="/aboutUs"> درباره ی ما</Link>
+          <Link href="/landingpage"> صفحه ی نخست</Link>
         </Ul>
       </Div>
     </>
