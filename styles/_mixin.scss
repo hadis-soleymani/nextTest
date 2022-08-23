@@ -7,32 +7,6 @@
   justify-content: center;
 }
 
-//search box input
-@mixin input($width) {
-  width: $width;
-  background-color: $light_green;
-  padding: 10px 10px 10px 30px;
-  border: none;
-  outline: none;
-  border-radius: 12px;
-  color: rgb(70, 77, 97);
-  transition: width 0.4s ease-in;
-  &:focus {
-    width: 10rem;
-    background-color: #fff;
-  }
-}
-
-//style for links text
-@mixin link_style {
-  font-size: 1rem;
-  color: $dark_text;
-  transition: color 0.2s ease-in;
-  &:hover {
-    color: $green;
-  }
-}
-
 
 //opacity animation
 @mixin opacity_animation($start, $duration) {
@@ -62,26 +36,9 @@
   }
 }
 
-//space between content
-@mixin categori_content {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
 
 @mixin boxSadow {
   box-shadow: rgba(0, 0, 0, 0.03) 0px 2px 1px, rgba(0, 0, 0, 0.03) 0px 4px 2px,
     rgba(0, 0, 0, 0.03) 0px 8px 4px, rgba(0, 0, 0, 0.03) 0px 16px 8px,
     rgba(0, 0, 0, 0.03) 0px 32px 16px;
-}
-@mixin border {
-  border: 1px solid rgba(205, 207, 211,.5) ;
-    border-radius: 16px;
-   
-}
-
-
-@mixin border_box {
-  border: 1px solid #e0e0e2;
-  border-radius: 16px;
 }

@@ -3,7 +3,13 @@ import Image from "next/image";
 import styles from "../styles/landingpage.module.scss";
 import Button from "../components/shared/button";
 import Navbar from "../components/shared/my_navbar";
-const Landingpage = () => {
+
+interface Props{
+data?:any;
+}
+
+const Landingpage:React.FC<Props> = ({ data }) => {
+  console.log(data)
   return (
     <>
       <Navbar />
@@ -11,11 +17,12 @@ const Landingpage = () => {
         <div className={styles.content_container}>
           <div className={styles.image_container}>
             <Image
-              src="/picture.png"
+              src="https://picsum.photos/200/300"
               alt="plant"
               layout="fixed"
               height={250}
               width={300}
+              style={{borderRadius:12}}
             />
           </div>
           <div className={styles.text_container}>
@@ -35,3 +42,13 @@ const Landingpage = () => {
 };
 
 export default Landingpage;
+
+// // This gets called on every request
+// export async function getServerSideProps() {
+//   // Fetch data from external API
+//   const res = await fetch(`https://picsum.photos/200/300`)
+//   const data = await res.json()
+
+//   // Pass data to the page via props
+//   return { props: { data } }
+// }

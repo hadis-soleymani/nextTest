@@ -11,5 +11,8 @@ module.exports = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  images: {
+    domains: ["picsum.photos"],
+  },
 }
 

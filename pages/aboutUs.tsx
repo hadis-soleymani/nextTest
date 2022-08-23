@@ -11,11 +11,12 @@ const AboutUs = () => {
       <div className={styles.container}>
         <div className={styles.image_container}>
           <Image
-            src="/picture.png"
+            src="https://picsum.photos/200/300?grayscale"
             alt="plant"
             layout="fixed"
             height={350}
             width={800}
+            style={{borderRadius:12}}
           />
         </div>
         <p className={styles.text}>
