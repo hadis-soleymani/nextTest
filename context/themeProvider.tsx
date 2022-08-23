@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
 
-//interface of one todo object
+//interface
 interface Theme {
   theme: string;
 }
@@ -14,7 +14,6 @@ type ACTIONTYPE =
 const ThemeReducer = (state: Theme, action: ACTIONTYPE) => {
   console.log(action);
   switch (action.type) {
-    //add one todo object
     case "light":
       return { ...state, theme: "light" };
 
@@ -44,14 +43,11 @@ export const themeContext = createContext<InputCreateContext>({
 type ProviderProps = {
   children: React.ReactNode;
 };
-const initialState:Theme = {
-  theme: "light",
-};
 
 //create context provider for wrapping App component
 const ThemeProvider = (props: ProviderProps) => {
   //[] is initialState
-  const [state, dispatch] = useReducer(ThemeReducer, {theme:'light'});
+  const [state, dispatch] = useReducer(ThemeReducer, { theme: "light" });
 
   return (
     <themeContext.Provider

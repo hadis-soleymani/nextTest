@@ -6,6 +6,8 @@
   width: 135px;
   color: rgb(70, 77, 97);
 }
+
+//ight theme
 .button {
   background-color: white;
   padding: 0 0.5rem;
@@ -31,20 +33,19 @@
   }
 }
 
-.button_dark{
-  
-    background-color: $dark_bg;
-    padding: 0 0.5rem;
-    height: 40px;
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid #187df1;
-    outline: none;
-  
-    color: #187df1;
-    &:hover {
-      background-color: #187df1;
-      color: white;
-    }
-  
+//dark theme
+.button_dark {
+  background-color: $dark_bg;
+  padding: 0 0.5rem;
+  height: 40px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #187df1;
+  outline: none;
+
+  color: #187df1;
+  &:hover {
+    background-color: #187df1;
+    color: white;
+  }
 }

@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import Image from "next/image";
 import styles from "../styles/about_us.module.scss";
 import Button from "../components/shared/button";
-import Navbar from "../components/shared/my_navbar";
-import ThemeProvider, { themeContext } from "../context/themeProvider";
+import Navbar from "../components/shared/navbar";
+import { themeContext } from "../context/themeProvider";
 
 const AboutUs = () => {
   const { state } = useContext(themeContext);

@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixin";
 
-//header container
+//light theme
 .header {
   top: 2vh;
   left: 7vw;
@@ -37,6 +37,8 @@
     }
   }
 }
+
+//dark text
 .header_dark {
   top: 2vh;
   left: 7vw;
@@ -93,7 +95,7 @@
   }
 }
 
-//
+//switch style
 .switch {
   position: relative;
   display: inline-block;
@@ -122,7 +124,6 @@
     border-radius: 50%;
   }
 }
-
 .slider:before {
   position: absolute;
   content: "";

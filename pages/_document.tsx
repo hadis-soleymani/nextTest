@@ -1,6 +1,6 @@
 // note: I add this file to project for styled component library
 
-import Document,{DocumentContext} from "next/document";
+import Document, { DocumentContext } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -30,4 +30,3 @@ export default class MyDocument extends Document {
     }
   }
 }
-

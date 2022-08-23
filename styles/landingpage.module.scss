@@ -5,7 +5,7 @@
   flex: 1;
   display: flex;
   width: 100vw;
- min-height:100vh;
+  min-height: 100vh;
 
   .container {
     display: flex;
@@ -43,8 +43,8 @@
 //dark theme
 .page_container_dark {
   background-color: black;
- width: 100vw;
- min-height:100vh;
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   .container {
     display: flex;
@@ -85,27 +85,27 @@
 //responsive in mobile size
 @media (max-width: 768px) {
   .page_container_dark {
-  .content_container {
-    flex-direction: column;
-    margin-right: 0;
+    .content_container {
+      flex-direction: column;
+      margin-right: 0;
+    }
+    .text_container {
+      width: 60vw;
+      padding: 1rem 0;
+      text-align: right;
+      margin-right: 0;
+    }
   }
-  .text_container {
-    width: 60vw;
-    padding: 1rem 0;
-    text-align: right;
-    margin-right: 0;
+  .page_container {
+    .content_container {
+      flex-direction: column;
+      padding-top: 2vh;
+    }
+    .text_container {
+      width: 60vw;
+      padding: 1rem 0;
+      text-align: right;
+      margin-right: 0;
+    }
   }
-}
-.page_container {
-  .content_container {
-    flex-direction: column;
-    padding-top: 2vh;
-  }
-  .text_container {
-    width: 60vw;
-    padding: 1rem 0;
-    text-align: right;
-    margin-right: 0;
-  }
-}
 }

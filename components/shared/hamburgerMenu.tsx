@@ -115,33 +115,12 @@ const Div = styled.div<Props>`
 `;
 const Ul = styled.ul<Props>`
   display: ${(props) => (props.open ? "flex" : "none")};
-  margin:0;
-  text-align:center;
+  margin: 0;
+  text-align: center;
   padding-left: 0;
 `;
 
-type ClickObject = {
-  خانه?: false;
-  فروشگاه?: false;
-  AboutMe?: false;
-  Expriences?: false;
-  Works?: false;
-  Blog?: false;
-  ContactUs?: false;
-};
-
 const HamburgerMenu = () => {
-  //for scroll with click
-  const [clicked, setClicked] = useState<ClickObject>({
-    خانه: false,
-    فروشگاه: false,
-    AboutMe: false,
-    Expriences: false,
-    Works: false,
-    Blog: false,
-    ContactUs: false,
-  });
-
   //open and close menu
   const [open, setOpen] = useState(false);
 
