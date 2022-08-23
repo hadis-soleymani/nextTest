@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import React, { useContext } from "react";
 import ThemeProvider, { themeContext } from "../context/themeProvider";
-import styles from "../styles/Home.module.scss";
 import AboutUs from "./aboutUs";
 
 const Home: NextPage = () => {
@@ -9,7 +8,7 @@ const Home: NextPage = () => {
   console.log(state);
   return (
     <ThemeProvider>
-      <div className={styles.container}>
+      <div >
         <AboutUs />
       </div>
     </ThemeProvider>
