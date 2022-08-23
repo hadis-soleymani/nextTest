@@ -2,30 +2,36 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/landingpage.module.scss";
 import Button from "../components/shared/button";
+import Navbar from "../components/shared/my_navbar";
 const Landingpage = () => {
   return (
-    <div  className={styles.container}>
-      <div className={styles.image_container}>
-        <Image
-          src="/picture.png"
-          alt="plant"
-          layout="fixed"
-          height={350}
-          width={800}
-        />
+    <>
+      <Navbar />
+      <div className={styles.container}>
+        <div className={styles.content_container}>
+          <div className={styles.image_container}>
+            <Image
+              src="/picture.png"
+              alt="plant"
+              layout="fixed"
+              height={250}
+              width={300}
+            />
+          </div>
+          <div className={styles.text_container}>
+            <h1>درباره ی ما</h1>
+            <p className={styles.text}>
+              نکته مهمی که در بیشتر سایتهای ایرانی توجهی به آن نمیشود طراحی صفحه
+              درباره ما یا همان About Us است. اکثر افراد در این بخش مطالبی
+              طولانی و خسته کننده برای کاربر و یا نوشته ای کوتاه و ناقص قرار
+              میدهند که میتواند اعتبار سایت یا شرکت شما را زیر سوال ببرد.
+            </p>
+          </div>
+        </div>
+        <Button>صفحه ی اصلی</Button>
       </div>
-      <p className={styles.text}>
-        شهر آرکوزلو یک حومه مسکونی ممتاز پورتو است که از بسیاری جهات دارای زمین
-        گلف 9 سوراخ معروف ، ویلاهای مجلل و عمارت است. خود میرامار به عنوان مقصدی
-        برای تعطیلات عمومی در نظر گرفته می شود که پرتغالی ها از مناطق همسایه آن
-        را دوست دارند. با این حال ، این ساحل هنوز به عنوان یک مقصد گردشگری بین
-        المللی چندان مشهور نشده است ، که به بازدیدکنندگانش مکانی برای لذت بردن
-        می دهد.
-      </p>
-      <Button>درباره ی ما</Button>
-    </div>
+    </>
   );
 };
 
 export default Landingpage;
-

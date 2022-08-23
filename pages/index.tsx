@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <AboutUs/>
-    <My_navbar/>
+   
     </div>
   )
 }

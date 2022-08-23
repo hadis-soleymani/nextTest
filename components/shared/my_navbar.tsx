@@ -23,17 +23,17 @@ const Navbar = () => {
       </div>
 
       <nav className={styles.center}>
-        <MdOutlineNightlight />
+        <MdOutlineNightlight size={20}/>
         <label className={styles.switch}>
           <input type="checkbox" />
           <span className={styles.slider}></span>
         </label>
-        <MdOutlineLightMode />
+        <MdOutlineLightMode size={20}/>
       </nav>
 
       <nav className={styles.right}>
-        <Link href="#">درباره ی ما</Link>
-        <Link href="#">صفحه ی نخست</Link>
+        <Link href="/aboutUs">درباره ی ما</Link>
+        <Link href="/landingpage">صفحه ی نخست</Link>
       </nav>
       {/* hamburgger menu just in mobile size */}
       <HamburgerMenu />

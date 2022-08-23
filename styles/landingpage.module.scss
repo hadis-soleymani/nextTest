@@ -1,0 +1,28 @@
+@import "variables";
+@import "mixin";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  @include center;
+}
+.content_container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 7rem;
+  @include center;
+  margin-bottom: 5rem;
+}
+.text_container {
+  width: 25vw;
+  margin-right: 3rem;
+  margin-top: 4rem;
+  h1 {
+    color: $dark_text;
+    text-align: center;
+  }
+}
+.text {
+  color: $dark_text;
+  text-align: right;
+}
