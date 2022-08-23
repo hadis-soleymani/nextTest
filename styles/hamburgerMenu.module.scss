@@ -1,0 +1,37 @@
+//hamburger style
+.hamburger_icon {
+  display: none;
+}
+
+//list of links container
+.hamburger_list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20vh;
+  text-align: center;
+  a {
+    padding: 7px 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+//close icon container
+.close_container {
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6vw;
+}
+
+//responsive in mobile size
+@media (max-width: 768px) {
+  .hamburger_icon {
+    display: flex;
+  }
+}

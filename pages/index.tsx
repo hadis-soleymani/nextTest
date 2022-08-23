@@ -1,12 +1,14 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+
+import My_navbar from '../components/shared/my_navbar'
+import styles from '../styles/Home.module.scss'
+import AboutUs from './aboutUs'
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-     
+      <AboutUs/>
+    <My_navbar/>
     </div>
   )
 }

@@ -1,0 +1,14 @@
+/* colors variables */
+
+
+$dark_text: #42474b;
+$gray: rgb(234, 237, 242);
+$blue: #187df1;
+
+
+
+:export {
+  dark_text: $dark_text;
+  gray: $gray;
+  blue: $blue;
+}
