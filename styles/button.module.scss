@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixin";
+
+.button_container {
+  position: relative;
+  width: 120px;
+  color: rgb(70, 77, 97);
+}
+.button {
+  background-color: white;
+  padding: 0 0.5rem;
+  height: 40px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #187df1;
+  outline: none;
+
+  color: #187df1;
+  &:hover {
+    background-color: #187df1;
+    color: white;
+  }
+}
+.button_container svg {
+  position: absolute;
+  right: 0.5rem;
+  top: 6px;
+  color: #187df1;
+  &:hover {
+    color: white;
+  }
+}

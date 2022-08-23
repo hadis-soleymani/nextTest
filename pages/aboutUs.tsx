@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/about_us.module.scss";
+import Button from "../components/shared/button";
 const AboutUs = () => {
   return (
     <div  className={styles.container}>
@@ -21,6 +22,7 @@ const AboutUs = () => {
         المللی چندان مشهور نشده است ، که به بازدیدکنندگانش مکانی برای لذت بردن
         می دهد.
       </p>
+      <Button>درباره ی ما</Button>
     </div>
   );
 };

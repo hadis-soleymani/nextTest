@@ -1,20 +1,18 @@
-
 @import "variables";
 @import "mixin";
-.container{
-    
-    @include center; 
-    flex-direction: column;
-    width: 100vw;
-    padding: 0 200px;
+.container {
+  @include center;
+  flex-direction: column;
+  width: 100vw;
+  padding: 0 200px 3rem 200px;
 }
-.image_container{
- width: 60vw;
- margin-top: 8rem;
- @include center;
+.image_container {
+  width: 60vw;
+  margin-top: 8rem;
+  @include center;
 }
-.text{
-    color:$dark_text;
-    width: 60vw;
-    text-align: right;
+.text {
+  color: $dark_text;
+  width: 60vw;
+  text-align: right;
 }

@@ -22,16 +22,10 @@
   }
 }
 .left {
-  button {
-    background-color: white;
-    padding: 0.5rem 1rem;
-    min-width: 80px;
-    border-radius: 8px;
-    border: 1px solid #187df1;
-    outline: none;
-    margin: 0 1rem;
-    color: #187df1;
-  }
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+  justify-content: space-around;
 }
 .right {
   color: $dark_text;

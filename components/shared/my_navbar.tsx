@@ -12,13 +12,14 @@ import { MdOutlineLightMode, MdOutlineNightlight } from "react-icons/md";
 
 //components
 import HamburgerMenu from "./hamburgerMenu";
+import Button from "./button";
 
 const Navbar = () => {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <button>ورود</button>
-        <button>ثبت نام</button>
+        <Button>ورود</Button>
+        <Button>ثبت نام</Button>
       </div>
 
       <nav className={styles.center}>
